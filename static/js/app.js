@@ -20,7 +20,7 @@ var populate = function(dataInput, filterStatus){
 //Populate table
 populate(data, false);
 
-// Filter by
+// Filter by attribute
 button.on("click", function() {
   d3.event.preventDefault();
   var inputDate = inputField.property("value");
