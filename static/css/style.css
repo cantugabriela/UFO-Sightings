@@ -1,23 +1,11 @@
-/* Import fonts
+/* /* Import fonts */
 @import url('https://fonts.googleapis.com/css?family=Space+Mono:700');
 @import url('https://fonts.googleapis.com/css?family=Lato');
 
 
-
-
-
-body{
-    font-family: 'Lato', sans-serif;
-}
-
-#title{
-    font-family: 'Space Mono', monospace;
-    color: #6e9f1f; 
-} */
-
-* {
+ *{
     box-sizing: border-box;
-    font-family: Ubuntu, sans-serif;
+    font-family: 'Lato', sans-serif;
   }
   
   html,
@@ -25,6 +13,12 @@ body{
     height: 100%;
     padding: 0;
     margin: 0;
+    background-image: url(https://www.animateit.net/data/media/august2009/space_bg.gif); 
+    
+  }
+/* Make button more visible */
+  .btn{
+    background-color:gray; 
   }
   
   /* The wrapper contains all of the page's content besides the footer, which is pushed to the bottom of the page */
@@ -195,6 +189,7 @@ body{
       text-align: center;
     }
   
+
     #table-area tbody td::before {
       display: block;
       font-size: 1.4em;
