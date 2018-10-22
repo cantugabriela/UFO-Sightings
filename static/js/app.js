@@ -33,4 +33,5 @@ button.on("click", function() {
 
 resetbtn.on("click", function(){
   populate(data, false); 
+  console.log("Table reset")
 })

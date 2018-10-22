@@ -18,7 +18,7 @@
   }
 /* Make button more visible */
   .btn{
-    background-color:gray; 
+    background-color:rgba(128, 128, 128, 0.781); 
   }
   
   /* The wrapper contains all of the page's content besides the footer, which is pushed to the bottom of the page */
