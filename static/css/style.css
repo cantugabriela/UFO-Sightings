@@ -1,11 +1,13 @@
 /* /* Import fonts */
 @import url('https://fonts.googleapis.com/css?family=Space+Mono:700');
 @import url('https://fonts.googleapis.com/css?family=Lato');
-
+@import url('https://fonts.googleapis.com/css?family=Michroma');
+@import url('https://fonts.googleapis.com/css?family=Karla');
 
  *{
     box-sizing: border-box;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Karla', sans-serif;
+   
   }
   
   html,
@@ -20,7 +22,29 @@
   .btn{
     background-color:rgba(128, 128, 128, 0.781); 
   }
-  
+
+  @keyframes bounce {
+    from { transform: translate3d(0, -50px, 0);     }
+    to   { transform: translate3d(0, 0px, 0); }
+  }
+
+  /* This CSS styles the ufo icon in the navbar */
+  .nav-ufo {
+    position: absolute;
+    bottom: 5px;
+    left: 200px;
+    width: 35px;
+    color: white;
+    animation: bounce 2s;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(.5,0.05,1,.5);
+    animation-iteration-count: infinite;
+  }
+  div .navbar{
+    background-color: black !important; 
+    border-bottom-style: groove; 
+    border-bottom-color: #618D1B; 
+  }
   /* The wrapper contains all of the page's content besides the footer, which is pushed to the bottom of the page */
   .wrapper {
     position: relative;
@@ -29,7 +53,7 @@
     overflow: auto;
   }
   
-  /* The footer is positioned at the bottom of the page */
+  /* The footer is positioned at the bottom of the page
   .footer {
     position: absolute;
     right: 0;
@@ -37,6 +61,7 @@
     left: 0;
     min-height: 100px;
     background: #4e5d6c;
+    background-color: green; 
   }
   
   /* The code styles the text at the bottom of the footer */
@@ -47,25 +72,25 @@
     left: 0;
     padding: 5px;
     background: #1b3146;
+    background-color: black; 
+    border-top-style: groove; 
+    border-top-color: #618D1B; 
+    font-size: 2rem;
   }
-  
+   */
   .navbar {
     padding: 5px;
     margin: 0;
+
+
   }
   
-  /* This CSS styles the ufo icon in the navbar */
-  .nav-ufo {
-    position: absolute;
-    bottom: 5px;
-    left: 150px;
-    width: 35px;
-    color: white;
-  }
+
   
   /* Adding styles to the aside and filter form */
   .ufo-form {
     margin-top: 50px;
+
   }
   
   .filters .panel-body {
@@ -113,6 +138,7 @@
     background-attachment: fixed;
     background-position: bottom center;
     background-size: cover;
+
   }
   
   .hero h1 {
@@ -196,6 +222,7 @@
       font-weight: bold;
       text-align: center;
       content: attr(data-th);
+
     }
   
     .hero h1 {
