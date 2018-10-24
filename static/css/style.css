@@ -20,7 +20,7 @@
   }
 /* Make buttons more visible */
   .btn{
-    background-color:rgba(128, 128, 128, 0.781); 
+    background-color: rgba(97, 141, 27, 0.322); 
   }
 
   @keyframes bounce {
@@ -53,17 +53,6 @@
     overflow: auto;
   }
   
-  /* The footer is positioned at the bottom of the page
-  .footer {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    min-height: 100px;
-    background: #4e5d6c;
-    background-color: green; 
-  }
-  
   /* The code styles the text at the bottom of the footer */
   .footer > .bottom {
     position: absolute;
@@ -85,11 +74,28 @@
 
   }
   
+div .panel{
+  border-style: groove; 
+  border-color: #618D1B; 
+}
 
+div .panel-heading{
+  background-color: black !important; 
+  border-bottom-style: groove !important; 
+  border-bottom-color: #618D1B !important; 
+}
+div .panel-body{
+  background-color: black !important; 
+}
+
+ul #filters{
+  background-color: black !important; 
+}
   
   /* Adding styles to the aside and filter form */
   .ufo-form {
     margin-top: 50px;
+
 
   }
   
@@ -175,12 +181,24 @@
     color: #8e979f;
   }
   
+
+  table{
+    /* background-color: #8d8d8d;  */
+    border-style: groove; 
+    border-color: #618D1B; 
+  }
   /* media queries which will only be activated at specific screen sizes */
   @media (max-width: 800px) {
     #table-area td {
       font-size: 1em;
     }
   }
+
+  
+.table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
+   /* background-color: rgba(97, 141, 27, 0.322);  */
+   background-color: #1F2D09; 
+}
   
   @media (max-width: 500px) {
     #table-area thead {
@@ -204,6 +222,7 @@
       margin-top: 20px;
       content: " ";
       background: aliceblue;
+
     }
   
     #table-area td {
