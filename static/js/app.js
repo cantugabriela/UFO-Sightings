@@ -1,16 +1,15 @@
 // Variables
 var button = d3.select("#filter-btn");
-var inputField = d3.select("#datetime"); 
+var inputField1 = d3.select("#datetime"); 
+// var inputField2 = d3.select("#city"); 
 var tbody = d3.select("tbody"); 
 var resetbtn = d3.select("#reset-btn"); 
 var columns = ["datetime", "city", "state", "country", "shape", "durationMinutes", "comments" ]
 
-var populate = function(dataInput, filterStatus){
-      dataInput.forEach(function (ufo_sightings)
+var populate = (dataInput, filterStatus)=>{
+
+      dataInput.forEach( ufo_sightings =>
       {
-        if(filterStatus){
-          tbody.html("");
-        }
         var row = tbody.append("tr");
         columns.forEach(column=> row.append("td").text(ufo_sightings[column])
         )
@@ -21,17 +20,21 @@ var populate = function(dataInput, filterStatus){
 populate(data, false);
 
 // Filter by attribute
-button.on("click", function() {
+button.on("click", ()=> {
   d3.event.preventDefault();
-  var inputDate = inputField.property("value");
+  var inputDate = inputField1.property("value");
+  // var inputCity = inputField2.property("value");
   // Filter by date matching input value
   var filterData = data.filter(data => data.datetime === inputDate);
+  
   // Add filtered sighting to table
+  tbody.html("");
   populate(filterData, true);
-
 })
 
-resetbtn.on("click", function(){
+
+resetbtn.on("click", () =>{
+  tbody.html("");
   populate(data, false); 
   console.log("Table reset")
 })
