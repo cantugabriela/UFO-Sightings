@@ -16,7 +16,7 @@ var populate = (dataInput) => {
 }
 
 //Populate table
-populate(data, false);
+populate(data);
 
 // Filter by attribute
 button.on("click", () => {
@@ -34,19 +34,20 @@ button.on("click", () => {
   // Add filtered sighting to table
   tbody.html("");
 
-let response ={
-  filterData, filterCity, filterDate
-}
+  let response = {
+    filterData, filterCity, filterDate
+  }
 
-  if(response){
-    if(response.filterData.length !== 0)
-    {
-      populate(filterData);
+  if (response.filterData.length !== 0) {
+    populate(filterData);
+  }
+    else if (response.filterData.length === 0 && ((response.filterCity.length !== 0 || response.filterDate.length !== 0))){
+      populate(filterCity) || populate(filterDate);
+  
     }
     else {
-      populate(filterCity) || populate(filterDate);
+      tbody.append("tr").append("td").text("No results found!"); 
     }
-}
 })
 
 resetbtn.on("click", () => {
