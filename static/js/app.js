@@ -21,8 +21,8 @@ populate(data, false);
 // Filter by attribute
 button.on("click", () => {
   d3.event.preventDefault();
-  var inputDate = inputField1.property("value");
-  var inputCity = inputField2.property("value");
+  var inputDate = inputField1.property("value").trim();
+  var inputCity = inputField2.property("value").toLowerCase().trim();
   // Filter by field matching input value
   var filterDate = data.filter(data => data.datetime === inputDate);
   console.log(filterDate)
