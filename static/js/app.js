@@ -38,7 +38,6 @@ let response ={
   filterData, filterCity, filterDate
 }
 
-console.log(response); 
   if(response){
     if(response.filterData.length !== 0)
     {
@@ -49,7 +48,6 @@ console.log(response);
     }
 }
 })
-
 
 resetbtn.on("click", () => {
   tbody.html("");
